@@ -5,5 +5,7 @@ import wang.ismy.travel.entity.Route;
 
 public interface RouteService {
 
-    PageBean<Route> list(Integer cid,Integer currentPage,Integer pageSize);
+    PageBean<Route> list(Integer cid, Integer currentPage, Integer pageSize, String kw);
+
+    Route findOne(Integer rid);
 }

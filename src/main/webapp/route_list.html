@@ -13,156 +13,197 @@
 <body>
 <!--引入头部-->
 <div id="header"></div>
-    <div class="page_one">
-        <div class="contant">
-            <div class="crumbs">
-                <img src="images/search.png" alt="">
-                <p>黑马旅行><span>搜索结果</span></p>
+<div class="page_one">
+    <div class="contant">
+        <div class="crumbs">
+            <img src="images/search.png" alt="">
+            <p>黑马旅行><span>搜索结果</span></p>
+        </div>
+        <div class="xinxi clearfix">
+            <div class="left">
+                <div class="header">
+                    <span>商品信息</span>
+                    <span class="jg">价格</span>
+                </div>
+                <ul id="dataList">
+
+
+                </ul>
+                <div class="page_num_inf">
+                    <i></i> 共
+                    <span id="totalPage">12</span>页<span id="totalCount">132</span>条
+                </div>
+                <div class="pageNum">
+                    <ul id="pageList">
+
+                    </ul>
+                </div>
             </div>
-            <div class="xinxi clearfix">
-                <div class="left">
-                    <div class="header">
-                        <span>商品信息</span>
-                        <span class="jg">价格</span>
-                    </div>
-                    <ul id="dataList">
-
-
-                    </ul>
-                    <div class="page_num_inf">
-                        <i></i> 共
-                        <span id="totalPage">12</span>页<span id="totalCount">132</span>条
-                    </div>
-                    <div class="pageNum">
-                        <ul id="pageList">
-
-                        </ul>
-                    </div>
+            <div class="right">
+                <div class="top">
+                    <div class="hot">HOT</div>
+                    <span>热门推荐</span>
                 </div>
-                <div class="right">
-                    <div class="top">
-                        <div class="hot">HOT</div>
-                        <span>热门推荐</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
-                            <div class="right">
-                                <p>清远新银盏温泉度假村酒店/自由行套...</p>
-                                <p>网付价<span>&yen;<span>899</span>起</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
-                            <div class="right">
-                                <p>清远新银盏温泉度假村酒店/自由行套...</p>
-                                <p>网付价<span>&yen;<span>899</span>起</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
-                            <div class="right">
-                                <p>清远新银盏温泉度假村酒店/自由行套...</p>
-                                <p>网付价<span>&yen;<span>899</span>起</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
-                            <div class="right">
-                                <p>清远新银盏温泉度假村酒店/自由行套...</p>
-                                <p>网付价<span>&yen;<span>899</span>起</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
-                            <div class="right">
-                                <p>清远新银盏温泉度假村酒店/自由行套...</p>
-                                <p>网付价<span>&yen;<span>899</span>起</span>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>
+                        <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
+                        <div class="right">
+                            <p>清远新银盏温泉度假村酒店/自由行套...</p>
+                            <p>网付价<span>&yen;<span>899</span>起</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
+                        <div class="right">
+                            <p>清远新银盏温泉度假村酒店/自由行套...</p>
+                            <p>网付价<span>&yen;<span>899</span>起</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
+                        <div class="right">
+                            <p>清远新银盏温泉度假村酒店/自由行套...</p>
+                            <p>网付价<span>&yen;<span>899</span>起</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
+                        <div class="right">
+                            <p>清远新银盏温泉度假村酒店/自由行套...</p>
+                            <p>网付价<span>&yen;<span>899</span>起</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="images/04-search_09.jpg" alt=""></div>
+                        <div class="right">
+                            <p>清远新银盏温泉度假村酒店/自由行套...</p>
+                            <p>网付价<span>&yen;<span>899</span>起</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <!--引入头部-->
-    <div id="footer"></div>
-    <!--导入布局js，共享header和footer-->
-    <script type="text/javascript" src="js/include.js"></script>
+<!--引入头部-->
+<div id="footer"></div>
+<!--导入布局js，共享header和footer-->
+<script type="text/javascript" src="js/include.js"></script>
+<script src="./js/getParameter.js"></script>
 </body>
 <script>
-    let cid = location.search.replace("?cid=","");
+    let cid = getParameter("cid");
+    let kw = getParameter("kw");
+
+    if (kw) {
+        // kw = encodeURI(kw);
+    }
     let currentPage = 1;
     let totalPage = 0;
     pageTurning();
 
-    function pageList(r){
+    /*一共展示10个页码，能够达到前5后4效果
+    如果前边不够5个，后边补齐4个
+    如果后边不足4个，前边补齐4个*/
+
+    function pageList(r) {
         $("#totalPage").html(r.data.totalPage);
         $("#totalCount").html(r.data.totalCount);
+
+        let begin;
+        let end;
+
+        // 页码范围选取
+        if (r.data.totalPage < 10) {
+            begin = 1;
+            end = r.data.totalPage;
+        } else {
+            begin = r.data.currentPage - 5;
+            end = r.data.currentPage + 4;
+
+            if (begin < 1) {
+                begin = 1;
+                end = begin + 9;
+            }
+
+            if (end > r.data.totalPage) {
+                end = r.data.totalPage;
+                begin = end - 9;
+            }
+        }
 
         let html = "";
 
         let firstPage = "<li class='threeword' onclick='currentPage=1;pageTurning();'><a href='javascript:currentPage=1;pageTurning();'>首页</a></li>";
         let prePage = "<li class='threeword' onclick='currentPage--;pageTurning();'><a href='#'>上一页</a></li>";
 
-        html += firstPage+prePage;
-        for (let i = 1;i<=r.data.totalPage;i++){
+        html += firstPage + prePage;
+        for (let i = begin; i <= end; i++) {
 
             let li = null;
 
-            if (i == currentPage){
-                li = "<li class='curPage' onclick='currentPage="+i+";pageTurning()'><a href='javascript:currentPage="+i+";pageTurning()'>"+i+"</a></li>"
-            }else{
-                li = "<li onclick='currentPage="+i+";pageTurning()'><a href='javascript:currentPage="+i+";pageTurning()'>"+i+"</a></li>";
+            if (i == currentPage) {
+                li = "<li class='curPage' onclick='currentPage=" + i + ";pageTurning()'><a href='javascript:currentPage=" + i + ";pageTurning()'>" + i + "</a></li>"
+            } else {
+                li = "<li onclick='currentPage=" + i + ";pageTurning()'><a href='javascript:currentPage=" + i + ";pageTurning()'>" + i + "</a></li>";
             }
             html += li;
         }
 
-        let lastPage = "<li class='threeword' onclick='currentPage="+r.data.totalPage+";pageTurning()'><a href='#'>尾页</a></li>";
+        let lastPage = "<li class='threeword' onclick='currentPage=" + r.data.totalPage + ";pageTurning()'><a href='#'>尾页</a></li>";
         let nextPage = "<li class='threeword' onclick='currentPage++;pageTurning()'><a href='#'>下一页</a></li>";
 
-        html +=nextPage +lastPage;
+        html += nextPage + lastPage;
 
         $("#pageList").html(html);
+        window.scrollTo(0, 0);
     }
 
-    function pageTurning(){
+    function pageTurning() {
 
-        if (currentPage < 1){
-            currentPage =1;
+        if (currentPage < 1) {
+            currentPage = 1;
         }
 
+        let url = "/route/list?currentPage="+currentPage+"&pageSize=15";
 
+        if (cid){
+            url += "&cid="+cid;
+        }
 
-        $.get("/route/list?cid="+cid+"&currentPage="+currentPage+"&pageSize=15",function (r) {
+        if (kw){
+            url += "&kw="+kw;
+        }
+
+        $.get(url, function (r) {
             pageList(r);
             dataList(r);
 
         });
     }
 
-    function dataList(r){
+    function dataList(r) {
         let html = "";
-        for (let i of r.data.list){
+        for (let i of r.data.list) {
             let li = "<li>\n" +
-                "                            <div class=\"img\"><img src=\""+i.rimage+"\" alt=\"\" width='90%'></div>\n" +
+                "                            <div class=\"img\"><img src=\"" + i.rimage + "\" alt=\"\" width='90%'></div>\n" +
                 "                            <div class=\"text1\">\n" +
-                "                                <p>"+i.routeIntroduce+"</p>\n" +
+                "                                <p>" + i.routeIntroduce + "</p>\n" +
                 "                                <br/>\n" +
                 "                            </div>\n" +
                 "                            <div class=\"price\">\n" +
                 "                                <p class=\"price_num\">\n" +
                 "                                    <span>&yen;</span>\n" +
-                "                                    <span>"+i.price+"</span>\n" +
+                "                                    <span>" + i.price + "</span>\n" +
                 "                                    <span>起</span>\n" +
                 "                                </p>\n" +
-                "                                <p><a href=\"route_detail.html\">查看详情</a></p>\n" +
+                "                                <p><a href=\"route_detail.html?rid="+i.rid+"\">查看详情</a></p>\n" +
                 "                            </div>\n" +
                 "                        </li>"
             html += li;

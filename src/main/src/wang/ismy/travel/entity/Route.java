@@ -2,6 +2,8 @@ package wang.ismy.travel.entity;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Route {
 
@@ -25,9 +27,12 @@ public class Route {
 
     private String rimage;
 
-    private Integer sid;
-
     private String sourceId;
 
+    private Integer sid;
+
+    private List<RouteImg> imgList;
+
+    private Seller seller;
 
 }
