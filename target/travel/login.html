@@ -43,16 +43,16 @@
         			<input name="password" type="text" placeholder="请输入密码" autocomplete="off">
         			<div class="verify">
 					<input name="check" type="text" placeholder="请输入验证码" autocomplete="off">
-					<span><img src="checkCode" alt="" onclick="changeCheckCode(this)"></span>
+					<span><img src="/ws/checkCode" id="checkImg" alt="" onclick="changeCheckCode(this)"></span>
 					<script type="text/javascript">
 						//图片点击事件
 						function changeCheckCode(img) {
-							img.src="checkCode?"+new Date().getTime();
+							img.src="/ws/checkCode?"+new Date().getTime();
 						}
 					</script>
 			</div>
 			<div class="submit_btn">
-        				<button type="button">登录</button>
+        				<button type="button" id="login_btn">登录</button>
         				<div class="auto_login">
         					<input type="checkbox" name="" class="checkbox">
         					<span>自动登录</span>
@@ -73,4 +73,19 @@
     <script type="text/javascript" src="js/include.js"></script>
 </body>
 
+<script>
+	$("#login_btn").on("click",function () {
+		$.post("/ws/login",$("#loginForm").serialize(),function (r) {
+			if (r.success){
+				alert(r.data);
+				location.href="./index.html";
+			}else{
+				alert(r.msg);
+
+				// 更新验证码
+				$("#checkImg").attr("src","/ws/checkCode?"+new Date().getTime());
+			}
+		})
+	})
+</script>
 </html>

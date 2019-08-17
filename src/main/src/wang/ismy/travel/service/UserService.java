@@ -12,4 +12,5 @@ public interface UserService {
 
     boolean active(String code);
 
+    User findByUsername(String username);
 }
