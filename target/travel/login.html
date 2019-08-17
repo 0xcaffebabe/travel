@@ -75,7 +75,7 @@
 
 <script>
 	$("#login_btn").on("click",function () {
-		$.post("/ws/login",$("#loginForm").serialize(),function (r) {
+		$.post("/user/login",$("#loginForm").serialize(),function (r) {
 			if (r.success){
 				alert(r.data);
 				location.href="./index.html";

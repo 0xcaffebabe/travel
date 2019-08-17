@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
 
                 try {
                     MailUtils.send(user.getEmail(), "邮箱激活",
-                            "<a href='http://localhost/ws/active?code=" + user.getCode() + "'>点击激活</a>");
+                            "<a href='http://localhost/user/active?code=" + user.getCode() + "'>点击激活</a>");
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }

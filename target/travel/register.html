@@ -141,7 +141,7 @@
 
 			if (f){
 
-				$.post("/ws/register",$(this).serialize(),function (r) {
+				$.post("/user/regist",$(this).serialize(),function (r) {
 					if (r.success){
 						alert("注册成功");
 						location.href="./register_ok.html";
