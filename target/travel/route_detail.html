@@ -40,10 +40,9 @@
                 <div class="pros_price">
                     <p class="price">￥<strong id="price"></strong><span>起</span></p>
                     <p class="collect">
-                        <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
 
-                        <a  class="btn already" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
-                        <span>已收藏100次</span>
+                        <a id="favoriteBtn" class="btn" href="javascript:addFavorite();"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
+                        <span>已收藏<span id="count"></span>次</span>
                     </p>
                 </div>        
             </div>
@@ -160,6 +159,7 @@
                 $("#rname").html(r.data.rname);
                 $("#routeIntroduce").html(r.data.routeIntroduce);
                 $("#price").html(r.data.price);
+                $("#count").html(r.data.count);
 
                 $("#seller_name").html(r.data.seller.sname);
                 $("#seller_consphone").html(r.data.seller.consphone);
@@ -188,6 +188,30 @@
                 html += "<a class=\"down_img down_img_disable\" style=\"margin-bottom: 0;\"></a>";
                 $("#smallPic").html(html);
                 imgGo();
+            }else{
+                alert(r.msg);
+            }
+        })
+    }
+
+    $.get("/route/favorite?rid="+rid,function (r) {
+        if (r.success){
+            if (r.data){
+                $("#favoriteBtn").addClass("already");
+                $("#favoriteBtn").attr("disabled","disabled");
+
+                $("#favoriteBtn").attr("href","#");
+            }
+        }else{
+            alert(r.msg);
+        }
+    });
+
+    function addFavorite(){
+        $.get("/route/addFavorite?rid="+rid,function (r) {
+            if (r.success){
+                alert(r.data);
+                location.reload();
             }else{
                 alert(r.msg);
             }

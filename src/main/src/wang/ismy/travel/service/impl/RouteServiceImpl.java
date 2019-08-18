@@ -1,8 +1,10 @@
 package wang.ismy.travel.service.impl;
 
+import wang.ismy.travel.dao.FavoriteDAO;
 import wang.ismy.travel.dao.RouteDAO;
 import wang.ismy.travel.dao.RouteImgDAO;
 import wang.ismy.travel.dao.SellerDAO;
+import wang.ismy.travel.dao.impl.FavoriteDAOImpl;
 import wang.ismy.travel.dao.impl.RouteDAOImpl;
 import wang.ismy.travel.dao.impl.RouteImgDAOImpl;
 import wang.ismy.travel.dao.impl.SellerDAOImpl;
@@ -21,6 +23,8 @@ public class RouteServiceImpl implements RouteService {
     private RouteImgDAO routeImgDAO = new RouteImgDAOImpl();
 
     private SellerDAO sellerDAO = new SellerDAOImpl();
+
+    private FavoriteDAO favoriteDAO = new FavoriteDAOImpl();
 
     @Override
     public PageBean<Route> list(Integer cid, Integer currentPage, Integer pageSize, String kw) {
@@ -49,7 +53,7 @@ public class RouteServiceImpl implements RouteService {
         route.setImgList(imgList);
         Seller seller = sellerDAO.findById(route.getSid());
         route.setSeller(seller);
-
+        route.setCount(favoriteDAO.count(route.getRid()));
         return route;
     }
 }
